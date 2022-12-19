@@ -96,10 +96,6 @@ export const data = {
             skill: "WebSoket"
         },
         {
-            id:38,
-            skill: "AWS"
-        },
-        {
             id:39,
             skill: "React Native"
         },
@@ -115,5 +111,9 @@ export const data = {
             id:42,
             skill: "Java"
         },
+        {
+            id:43,
+            skill: "AWS"
+        }
     ]
 }

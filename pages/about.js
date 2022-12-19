@@ -36,7 +36,7 @@ const About = (data) => {
         {data && data?.data.experience && data.data.experience.length > 0 && (
           <div className="flex">
             {/** border-left */}
-            <div className="w-5 bg-gradient-to-b from-pink-500 via-indigo-400 to-purple-700" />
+            <div className="w-3 bg-gradient-to-b from-pink-500 via-indigo-400 to-purple-700" />
             <div>
               {data.data.experience.map((experience) => (
                 <div
