@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThemeButton = React.memo(({theme, handleTheme}) => {
+const ThemeButton = ({theme, handleTheme}) => {
   return (
     <button
         className="px-6 py-2 font-semibold "
@@ -13,6 +13,6 @@ const ThemeButton = React.memo(({theme, handleTheme}) => {
         )}
     </button>
   )
-})
+}
 
-export default ThemeButton;
+export default React.memo(ThemeButton);

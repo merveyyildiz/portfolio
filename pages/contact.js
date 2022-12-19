@@ -29,7 +29,7 @@ const Contact = () => {
 
                 <FadeInLeftAnimationDiv className="w-full md:w-1/2 lg:w-1/3 select-none flex flex-row items-center shadow-sm rounded-md border border-slate-300 dark:border-slate-700 py-2 px-4">
                     <PhoneIcon className={"w-8 h-5 fill-current"} />
-                    <span className="bg-transparent py-2 pl-9 focus:outline-none outline-none sm:text-sm"  value="" disabled>+90 0535 848 57 99</span>
+                    <span className="bg-transparent py-2 pl-9 focus:outline-none outline-none sm:text-sm"  value="" disabled>+90 0535 -</span>
                 </FadeInLeftAnimationDiv>
                 
                 <FadeInRightAnimationDiv className="w-full md:w-1/2 lg:w-1/3 flex flex-row items-center shadow-sm rounded-md border border-slate-300 dark:border-slate-700 py-2 px-4">
