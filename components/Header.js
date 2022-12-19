@@ -19,6 +19,7 @@ const Header = () => {
           ["Home", "/", 1],
           ["About", "/about", 2],
           ["Projects", "/projects", 3],
+          ["Contact", "/contact", 4],
         ].map(([title, url, id]) => (
           <a
             href={url}
