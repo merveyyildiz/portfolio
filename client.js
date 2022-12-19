@@ -1,7 +1,7 @@
 import { GraphQLClient } from "graphql-request";
 
 export const graphcms = new GraphQLClient(
-    "XXXX",
+    process.env.NEXT_GRAPHQL_URL,
     {
         headers: {}
     }

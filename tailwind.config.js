@@ -17,6 +17,8 @@ module.exports = {
       colors: {
         "primary-light": "#f8f8f8",
         "primary-dark": "#191919",
+        "gray-dark": "#141c2e",
+        "gray-light":"#",
         pinkish: {
           100: "#edb5f5",
           200: "#eb7ad4",
