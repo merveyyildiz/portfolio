@@ -53,7 +53,7 @@ export const data = {
         },
         {
             id: 22,
-            schoolName: "English Preparatory  / Karabuk University",
+            schoolName: "School Of Foreign Languages / Karabuk University",
             date: "2015-2016"
         },
         {

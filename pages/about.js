@@ -9,12 +9,6 @@ const ZoomInP = styled.p`
   animation: 3s ${zoomInAnimation};
 `;
 
-const swingAnimation = keyframes`${swing}`;
-
-const SwingDiv = styled.div`
-  animation: 2s ${swingAnimation};
-`;
-
 const About = (data) => {
   return (
     <Layout title={"Portfolio / About"} description={"about"}>
@@ -29,9 +23,9 @@ const About = (data) => {
         </div>
 
         {/* Experience*/}
-        <SwingDiv className="text-3xl text-center my-10 font-rockNRoll">
+        <div className="text-3xl text-center my-10 font-rockNRoll">
           Experience
-        </SwingDiv>
+        </div>
 
         {data && data?.data.experience && data.data.experience.length > 0 && (
           <div className="flex">
@@ -59,9 +53,9 @@ const About = (data) => {
         )}
 
         {/* education*/}
-        <SwingDiv className="text-3xl text-center my-10 font-rockNRoll">
+        <div className="text-3xl text-center my-10 font-rockNRoll">
           Education
-        </SwingDiv>
+        </div>
 
         {data &&
           data?.data.education &&
@@ -86,9 +80,9 @@ const About = (data) => {
           ))}
 
         {/* Skills */}
-        <SwingDiv className="text-3xl text-center my-10 font-rockNRoll">
+        <div className="text-3xl text-center my-10 font-rockNRoll">
           Skills
-        </SwingDiv>
+        </div>
 
         <ul className="grid grid-cols-2 md:grid-cols-5 gap-x-20 gap-y-10">
           {data &&
