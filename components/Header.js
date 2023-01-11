@@ -33,41 +33,35 @@ const Header = () => {
 
   return (
     <header className="flex justify-end h-16 px-4 md:px-6 py-4 max-w-5xl mx-auto bg-transparent mb-6">
-      {/** Desktop Menu */}
-      <nav className="sm:justify-center space-x-2 md:space-x-4 hidden lg:flex">
-        {Menu.map(([title, url, id]) => (
-          <a
-            href={url}
-            key={id}
-            className="rounded-lg px-1 md:px-3 py-2 text-slate-700 font-medium dark:text-white hover:text-pink-600 dark:hover:text-pink-600"
-          >
-            {title}
+
+      <nav className="sm:justify-center space-x-2 md:space-x-4 lg:flex md:cursor-pointer">
+        <a onClick={handleToggle} className="md:inline-block lg:hidden">
+          <MenuIcon className={`${toggleMenu ? "hidden" : "block" } w-7 h-7 fill-current`}/>
+        </a>
+
+        <div className={`md:${toggleMenu  ? "inline-block" : "hidden"} hidden lg:block md:h-full md:border-r-gray-600`}>
+          <a onClick={handleToggle} className={`md:${toggleMenu  ? "inline-block" : "hidden"} hidden lg:hidden`} >
+            <CloseIcon className="w-7 h-7 fill-current" />
           </a>
-        ))}
-        <ThemeButton theme={theme} handleTheme={handleTheme}/>
-      </nav>
-
-      {/** Mobile Menu */}
-      <nav className="sm:justify-center space-x-2 md:space-x-4 flex lg:hidden dark:text-white cursor-pointer">
-        <a onClick={handleToggle}><MenuIcon className={`${toggleMenu ? "hidden" : "block" } w-7 h-7 fill-current`}/></a>
-
-        <div className={`${toggleMenu ? "block" : "hidden" } h-full border-r-gray-600`}>
-          <a onClick={handleToggle}><CloseIcon className="w-7 h-7 fill-current" /></a>
-          <div className="flex flex-col  gap-5 mt-8 justify-start items-center absolute right-0 w-full pt-4 bg-primary-light dark:bg-gray-900" style={{"height": "calc(100% - 300px)"}}>
-            {Menu.map(([title, url, id]) => (
+          
+          <div className="flex flex-col lg:flex-row md:w-full md:gap-5 mt-8 lg:mt-1 lg:mr-3 justify-start lg:justify-end md:items-center md:absolute md:right-0 md:pt-4 lg:pt-0 md:bg-primary-light md:dark:bg-gray-900 duration-300" >
+            {
+              Menu.map(([title, url, id]) => (
                 <a
                   href={url}
                   key={id}
-                  className="rounded-lg px-1 md:px-3 py-2 text-slate-700 font-medium dark:text-white hover:text-pink-600 dark:hover:text-pink-600"
+                  className="rounded-lg px-1 md:px-3 py-2 text-slate-700 font-medium dark:text-white hover:text-pink-600 dark:hover:text-pink-600 duration-300"
                 >
                   {title}
                 </a>
-            ))}
+              ))
+            }
+          
             <ThemeButton theme={theme} handleTheme={handleTheme}/>
-           </div> 
+  
+          </div>
         </div>
       </nav>
-
     </header>
   );
 };
